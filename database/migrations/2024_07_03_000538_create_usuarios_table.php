@@ -19,10 +19,12 @@ class CreateUsuariosTable extends Migration
             $table->char('apellido');
             $table->char('correo');
             $table->char('telefono');
-            $table->char('rut')->unique();
-            $table->decimal('imc');
+            $table->char('rut');
             $table->date('fechaN');
-            $table->char('password');
+            $table->char('password')->unique();
+            $table->decimal('peso');
+            $table->decimal('altura');
+            $table->decimal('imc');
             $table->timestamps();
         });
     }
